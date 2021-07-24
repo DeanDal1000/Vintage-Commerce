@@ -4,12 +4,14 @@ import { Card } from 'react-bootstrap';
 const ProductCard = ({ product }) => {
   return (
     <div>
-      <Card>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" img src={product.media.source} />
         <Card.Body>
-          <img src={product.media.source} />
-          {product.name}
-          {product.price.formatted_with_symbol}
-          {product.description.replace(/(<([^>]+)>)/gi, '')}
+          <Card.Title> {product.name}</Card.Title>
+          <Card.Text>
+            {product.price.formatted_with_symbol}
+            <p> {product.description.replace(/(<([^>]+)>)/gi, '')}</p>
+          </Card.Text>
         </Card.Body>
       </Card>
     </div>

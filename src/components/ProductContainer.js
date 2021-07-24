@@ -22,15 +22,15 @@ const ProductContainer = () => {
 
   return (
     <div>
-      <Container>
-        <Row>
-          {products.map((product) => (
-            <Col sm key={product.id}>
+      {products.map((product) => (
+        <Container fluid="md" className="product-container">
+          <Row>
+            <Col key={product.id}>
               <ProductCard product={product} />
             </Col>
-          ))}
-        </Row>
-      </Container>
+          </Row>
+        </Container>
+      ))}
     </div>
   );
 };
