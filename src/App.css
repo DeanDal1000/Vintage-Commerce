@@ -5,3 +5,8 @@
 .product-container {
   display: inline-block;
 }
+
+.title {
+  font-family: 'Oswald', Sans-serif;
+  letter-spacing: 0.5rem;
+}

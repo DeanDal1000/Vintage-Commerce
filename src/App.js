@@ -33,6 +33,7 @@ function App() {
     <Container maxW="container.xl" h="100vh">
       <Flex justifyContent="space-between" alignContent="center">
         <Text
+          className="title"
           as="a"
           href="/"
           fontSize="2rem"
@@ -49,6 +50,7 @@ function App() {
           leftIcon={<FiShoppingBag size="24px" />}
           size="lg"
           p={2}
+          className="snipcart-checkout"
         >
           View Cart
         </Button>
@@ -74,13 +76,14 @@ function App() {
             >
               <Image
                 h="350px"
+                w="100%"
                 fit="cover"
                 src={product.image}
                 alt={`Picture of ${product.name}`}
                 roundedTop="lg"
               />
 
-              <Box p="6">
+              <Box p="4">
                 <Flex
                   mt="1"
                   justifyContent="space-between"
@@ -122,6 +125,13 @@ function App() {
                   colorScheme="blue"
                   variant="outline"
                   alignSelf={'center'}
+                  className="snipcart-add-item"
+                  data-item-id={product.id}
+                  data-item-image={product.image}
+                  data-item-name={product.name}
+                  data-item-url="/"
+                  data-item-description={product.description}
+                  data-item-price={product.price}
                 >
                   Add to Cart
                 </Button>
